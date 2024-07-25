@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uuuuuuuuuuuuuyyyyyyyyyyy</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .header {
+            background: #dc0909;
+            color: #fff;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-item {
+            margin-left: 1rem;
+            position: relative;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem;
+            display: block;
+        }
+
+        .nav-link:hover {
+            background: #d7f20d;
+            color: #dc0909;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: #dc0909;
+            text-decoration: none;
+        }
+
+        .dropdown-menu a:hover {
+            background: #d7f20d;
+        }
+
+        .nav-item:hover .dropdown-menu {
+            display: block;
+        }
+
+        .hero {
+            background: linear-gradient(90deg, #dc0909, #d7f20d);
+            color: #fff;
+            text-align: center;
+            padding: 4rem 0;
+            margin-top: 5rem;
+        }
+
+        .hero .btn {
+            background: #fff;
+            color: #dc0909;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .shop-options {
+            display: none;
+            margin-top: 1rem;
+        }
+
+        .shop-options .btn {
+            margin: 0.5rem;
+        }
+
+        .products {
+            padding: 2rem 0;
+        }
+
+        .product-grid {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .product-item {
+            background: #f4f4f4;
+            padding: 1rem;
+            flex: 1 1 calc(33.333% - 1rem);
+            box-sizing: border-box;
+        }
+
+        .product-item img {
+            max-width: 100%;
+        }
+
+        .product-item h3 {
+            margin: 0.5rem 0;
+        }
+
+        .product-item .btn {
+            background: #dc0909;
+            color: #fff;
+            border: none;
+            padding: 0.5rem;
+            margin: 0.100rem 0;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .about, .contact {
+            padding: 2rem 0;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact form input, .contact form textarea {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        .footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        .social-icons {
+            margin-bottom: 1rem;
+        }
+
+        .rounded-icon {
+            border-radius: 50%;
+            margin: 0 0.5rem;
+        }
+
+        .cart {
+            display: none;
+            padding: 2rem 0;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f4f4f4;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">𝓓jjjjjjjjjjjjhhh</div>
+                <ul class="nav-menu">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">Categories</a>
+                        <div class="dropdown-menu">
+                            <a href="#">Category 1</a>
+                            <a href="#">Category 2</a>
+                            <a href="#">Category 3</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="#Alert " class="nav-link">Alert </a></li>
+                    <li class="nav-item"><a href="#about " class="nav-link">About Us  </a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact Us</a></li>
+                    <li class="nav-item"><a href="#cart" class="nav-link" id="cart-link">Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to Our Store</h1>
+            
+            <p>Find the best products here</p>
+            <button class="btn" id="shop-now-btn">Shop Now</button>
+            <div id="shop-options" class="shop-options">
+                <button class="btn" onclick="scrollToSection('feaaaaature-products')">Feaaaaature Product</button>
+                <button class="btn" onclick="scrollToSection('treeeeending-products')">Treeeeending Product</button>
+                <button class="btn" onclick="scrollToSection('newwww-products')">Newwww Product</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section class="cart" id="cart">
+        <div class="container">
+            <h2>Your Cart</h2>
+            <label for="customer-name">Name:</label>
+            <input type="text" id="customer-name" placeholder="Enter your name">
+            
+            <label for="customer-phone">Phone Number:</label>
+            <input type="text" id="customer-phone" placeholder="Enter your phone number">
+            <div id="cart-items" class="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <p id="cart-total">Cart Total: $0.00</p>
+            <button class="btn" id="print-cart-btn">Print Cart</button>
+            <button class="btn" id="Email-btn">Email</button>
+            <button class="btn" id="Whatsapp-btn">Whatsapp</button>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <section class="products" id="feaaaaature-products">
+            <div class="container">
+                <h2>Feaaature Products</h2>
+                <input type="text" id="search-bar-feature" placeholder="Search products..." oninput="searchProducts('feature')">
+
+                <div class="product-grid" id="product-grid-feature">
+                    <!-- Product Items will be added here -->
+                    <div class="product-item">
+                        <img src="C:\Users\LENOVO\Pictures\New folder (2)\image\tt.png" alt="Product Image">
+                        <h3>1AAAAA</h3>
+                        <p>90₹/ 12 piece</p>
+                        <button class="btn">Available</button>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="C:\Users\LENOVO\Desktop\Blue Illustrative Community Landscape Banner (2).png" alt="Product Image">
+                        <h3>2AAAAA</h3>
+                        <p>80₹/12 piece</p>
+                        <button class="btn">Available</button>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="C:\Users\LENOVO\Pictures\New folder (2)\image\po.jpg" alt="Product Image">
+                        <h3>3BBBBB</h3>
+                        <p>900₹/12 piece</p>
+                        <button class="btn">Available</button>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+<div class="product-item">
+                        <img src="C:\Users\LENOVO\Pictures\New folder (2)\image\po.jpg" alt="Product Image">
+                        <h3>1AAAAA</h3>
+                        <p>970₹/ 12 piece</p>
+                        <button class="btn">Available</button>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="C:\Users\LENOVO\Desktop\Blue Illustrative Community Landscape Banner (2).png" alt="Product Image">
+                        <h3>2BBBBB</h3>
+                        <p>840₹/12 piece</p>
+                        <button class="btn">Available</button>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="C:\Users\LENOVO\Pictures\New folder (2)\image\po.jpg" alt="Product Image">
+                        <h3>3AAAAA</h3>
+                        <p>910₹/12 piece</p>
+                        <button class="btn">Available</button>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products" id="treeeeending-products">
+            <div class="container">
+                <h2>Treeeeending Products</h2>
+                <input type="text" id="search-bar-trending" placeholder="Search products..." oninput="searchProducts('trending')">
+
+                <div class="product-grid" id="product-grid-trending">
+                    <!-- Product Items will be added here -->
+                    <div class="product-item">
+                        <img src="C:\Users\LENOVO\Desktop\Blue Illustrative Community Landscape Banner (2).png" alt="Product Image">
+                        <h3>1BBBBB</h3>
+                        <p>10₹/12 piece </p>
+                        <button class="btn">Available</button>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="C:\Users\LENOVO\Desktop\Blue Illustrative Community Landscape Banner (2).png" alt="Product Image">
+                        <h3>2AAAAA</h3>
+                        <p>30₹/12 piece</p>
+                        <button class="btn">Not Available</button>
+                        
+                    </div>
+                    <div class="product-item">
+                        <img src="C:\Users\LENOVO\Desktop\Blue Illustrative Community Landscape Banner (2).png" alt="Product Image">
+                        <h3>3BBBBB</h3>
+                        <p>40₹/12 piece</p>
+                        <button class="btn">Available</button>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+<div class="product-item">
+                        <img src="C:\Users\LENOVO\Desktop\Blue Illustrative Community Landscape Banner (2).png" alt="Product Image">
+                        <h3>1AAAAA</h3>
+                        <p>150₹/12 piece </p>
+                        <button class="btn">Available</button>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="C:\Users\LENOVO\Desktop\Blue Illustrative Community Landscape Banner (2).png" alt="Product Image">
+                        <h3>2AAAAA</h3>
+                        <p>330₹/12 piece</p>
+                        <button class="btn">Available</button>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="C:\Users\LENOVO\Desktop\Blue Illustrative Community Landscape Banner (2).png" alt="Product Image">
+                        <h3>3BBBBB</h3>
+                        <p>480₹/12 piece</p>
+                        <button class="btn">Available</button>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products" id="newwww-products">
+            <div class="container">
+                <h2>Newwww Products</h2>
+                <input type="text" id="search-bar-new" placeholder="Search products..." oninput="searchProducts('new')">
+
+                <div class="product-grid" id="product-grid-new">
+                    <!-- Product Items will be added here -->
+                    <div class="product-item">
+                        <img src="C:\Users\LENOVO\Desktop\Blue Illustrative Community Landscape Banner (2).png" alt="Product Image">
+                        <h3>1BBBBB</h3>
+                        <p>40₹/12 piece</p>
+                        <button class="btn">Available</button>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="C:\Users\LENOVO\Desktop\Blue Illustrative Community Landscape Banner (2).png" alt="Product Image">
+                        <h3>2AAAAA</h3>
+                        <p>60₹/12 piece</p>
+                        <button class="btn">Available</button>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="C:\Users\LENOVO\Desktop\Blue Illustrative Community Landscape Banner (2).png" alt="Product Image">
+                        <h3>3BBBBB</h3>
+                        <p>70₹/12 piece</p>
+                        <button class="btn">Available</button>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+<div class="product-item">
+                        <img src="C:\Users\LENOVO\Desktop\Blue Illustrative Community Landscape Banner (2).png" alt="Product Image">
+			<img src="C:\Users\LENOVO\Desktop\Blue Illustrative Community Landscape Banner (2).png" alt="Product Image">
+                        <h3>1ACAAA</h3>
+                        <p>450₹/12 piece</p>
+                        <button class="btn">Available</button>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="C:\Users\LENOVO\Desktop\Blue Illustrative Community Landscape Banner (2).png" alt="Product Image">
+			<img src="C:\Users\LENOVO\Desktop\Blue Illustrative Community Landscape Banner (2).png" alt="Product Image">
+                        <h3>2BBBBB</h3>
+                        <p>620₹/12 piece</p>
+                        <button class="btn">Available</button>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="C:\Users\LENOVO\Desktop\Blue Illustrative Community Landscape Banner (2).png" alt="Product Image">
+			<img src="C:\Users\LENOVO\Desktop\Blue Illustrative Community Landscape Banner (2).png" alt="Product Image">
+                        <h3>3AAAAA</h3>
+                        <p>790₹/12 piece</p>
+                        <button class="btn">Not Available</button>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- About Us Section -->
+        <section class="Alert" id="Alert ">
+            <div class="container">
+                <h2>Alert  </h2>
+                <p>esxdrctfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffvccccccccccccccccccccccc</p>
+		
+            </div>
+        </section>
+        <section class="about" id="about ">
+            <div class="container">
+                <h2>About Us </h2>
+                <p>sedrftgyhujiko,lpbhububuubbbbbbbhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</p>
+
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Adctfvgbhjnmk</p>
+		<p>Sftgyh</p>
+		<p>Assam</p>
+		<h3>Contact No.- 74567</h3>
+		<h3>Email ID- aawsadba234@gmail.com </h3>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            
+            <p>&copy; 2024 hhhhhhhhh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("shop-now-btn").addEventListener("click", function() {
+            document.getElementById("shop-options").style.display = "block";
+        });
+
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        document.querySelectorAll(".add-to-cart").forEach(function(button) {
+            button.addEventListener("click", function() {
+                addToCart(button);
+            });
+        });
+
+        function addToCart(button) {
+            const productItem = button.closest(".product-item");
+            const productName = productItem.querySelector("h3").textContent;
+            const productPrice = productItem.querySelector("p").textContent;
+
+            const cartItem = document.createElement("div");
+            cartItem.classList.add("cart-item");
+            cartItem.innerHTML = `
+                <span>${productName}</span>
+                <span>${productPrice}</span>
+                <button class="btn remove-from-cart">Remove</button>
+            `;
+
+            document.getElementById("cart-items").appendChild(cartItem);
+            updateCartTotal();
+
+            cartItem.querySelector(".remove-from-cart").addEventListener("click", function() {
+                cartItem.remove();
+                updateCartTotal();
+            });
+        }
+
+        function updateCartTotal() {
+            const cartItems = document.querySelectorAll(".cart-item");
+            let total = 0;
+
+            cartItems.forEach(function(item) {
+                const priceText = item.querySelector("span:nth-child(2)").textContent;
+                const price = parseFloat(priceText.replace("$", ""));
+                total += price;
+            });
+
+            document.getElementById("cart-total").textContent = `Cart Total:${total.toFixed(2)}`;
+        }
+
+        document.getElementById("cart-link").addEventListener("click", function(event) {
+            event.preventDefault();
+            document.getElementById("cart").style.display = "block";
+            scrollToSection("cart");
+        });
+
+document.getElementById("print-cart-btn").addEventListener("click", function() {
+    // Get customer details
+    const customerName = document.getElementById("customer-name").value;
+    const customerPhone = document.getElementById("customer-phone").value;
+
+    // Get cart items
+    const cartItems = document.querySelectorAll(".cart-item");
+
+    // Construct cart content for printing
+    let cartContent = `
+        <h2>Cart Items</h2>
+        <p>Customer Name: ${customerName}</p>
+        <p>Phone Number: ${customerPhone}</p>
+        <table style="width:100%">
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+            </tr>`;
+
+    cartItems.forEach(function(item) {
+        const productName = item.querySelector("span:nth-child(1)").textContent;
+        const productPrice = item.querySelector("span:nth-child(2)").textContent;
+        
+        cartContent += `
+            <tr>
+                <td>${productName}</td>
+                <td>${productPrice}</td>
+            </tr>`;
+    });
+
+    cartContent += `
+        <tr>
+            <td><strong>Total:</strong></td>
+            <td><strong>${document.getElementById("cart-total").textContent}</strong></td>
+        </tr>
+    </table>`;
+
+    // Open a new window and print
+    const printWindow = window.open('', '', 'height=400,width=600');
+    printWindow.document.write('<html><head><title>Print Cart</title>');
+    printWindow.document.write('<style>table, th, td { border: 1px solid black; border-collapse: collapse; padding: 8px; }</style>');
+    printWindow.document.write('</head><body>');
+    printWindow.document.write(cartContent);
+    printWindow.document.write('</body></html>');
+    printWindow.document.close();
+    printWindow.print();
+});
+
+
+
+        document.getElementById("Email-btn").addEventListener("click", function() {
+            const name = document.getElementById("customer-name").value;
+            const phone = document.getElementById("customer-phone").value;
+            let cartDetails = `Name: ${name}\nPhone: ${phone}\n\nCart Items:\n`;
+
+            document.querySelectorAll(".cart-item").forEach(function(item) {
+                const productName = item.querySelector("span:nth-child(1)").textContent;
+                const productPrice = item.querySelector("span:nth-child(2)").textContent;
+                cartDetails += `${productName} - ${productPrice}\n`;
+            });
+
+            cartDetails += `\n${document.getElementById("cart-total").textContent}`;
+
+            const mailtoLink = `mailto:rajakxrctfvgbhhter278945660@gmail.com?subject=Cart%20Details&body=${encodeURIComponent(cartDetails)}`;
+            window.location.href = mailtoLink;
+        });
+
+
+
+        document.getElementById("Whatsapp-btn").addEventListener("click", function() {
+    const name = document.getElementById("customer-name").value;
+    const phone = document.getElementById("customer-phone").value;
+    let cartDetails = `Name: ${name}\nPhone: ${phone}\n\nCart Items:\n`;
+
+    document.querySelectorAll(".cart-item").forEach(function(item) {
+        const productName = item.querySelector("span:nth-child(1)").textContent;
+        const productPrice = item.querySelector("span:nth-child(2)").textContent;
+        cartDetails += `${productName} - ${productPrice}\n`;
+    });
+
+    cartDetails += `\nTotal: ${document.getElementById("cart-total").textContent}`;
+
+    // WhatsApp number to add to the message
+    const whatsappNumber = "7698456368185746900";
+    const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(cartDetails)}`;
+    window.open(whatsappLink, "_blank");
+});
+
+
+        function searchProducts(type) {
+            const searchBar = document.getElementById(`search-bar-${type}`);
+            const filter = searchBar.value.toLowerCase();
+            const productGrid = document.getElementById(`product-grid-${type}`);
+            const productItems = productGrid.getElementsByClassName("product-item");
+
+            Array.from(productItems).forEach(function(item) {
+                const productName = item.getElementsByTagName("h3")[0].textContent;
+                if (productName.toLowerCase().indexOf(filter) > -1) {
+                    item.style.display = "";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
